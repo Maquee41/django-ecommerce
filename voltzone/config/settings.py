@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "catalog.apps.CatalogConfig",
 ]
 
 MIDDLEWARE = [
@@ -91,6 +92,10 @@ USE_TZ = True
 
 
 STATIC_URL = "static/"
+
+
+MEDIA_URL = "media/"
+MEDIA_ROOT = "media/"
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
