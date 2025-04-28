@@ -1,0 +1,19 @@
+{% load static %}
+
+<article class="catalog-card">
+  <a href="/catalog/{{ product.id }}" class="catalog-card-link">
+    <img src="{{ product.image.url }}" alt="Монтажный провод" class="catalog-card-image" width="300">
+    <h3 class="catalog-card-title">{{ product.name }}</h3>
+    <p class="catalog-card-price">{{ product.price }}</p>
+    {% if product.count > 19  %}
+      <p class="catalog-card-stock in-stock">Много</p>
+    {% elif product.count > 1 %}
+      <p class="catalog-card-stock low-stock">Немного</p>
+    {% elif product.count == 0 %}
+      <p class="catalog-card-stock out-of-stock">Закончились</p>
+    {% endif %}
+  </a>
+  <button class="catalog-card-cart cart" type="button">
+    <img src="{% static 'icons/cart.svg' %}" alt="Корзина" class="catalog-cart-image cart-image">
+  </button>
+</article>

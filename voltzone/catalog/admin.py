@@ -12,4 +12,4 @@ class ItemAdmin(admin.ModelAdmin):
 
     def preview(self, obj):
         if obj.image:
-            return mark_safe(f'<img src="{obj.image.url}" />')
+            return mark_safe(f'<img width=300 src="{obj.image.url}" />')

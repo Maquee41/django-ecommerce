@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="catalog">
+  <div class="catalog-header">
+    <h1 class="visually-hidden">Каталог</h1>
+    <h2 class="catalog-title">Провода</h2>
+    <nav class="catalog-menu">
+      <ul class="catalog-menu-list menu-list">
+        <li class="catalog-menu-item">
+          <a href="/" class="catalog-menu-link menu-link">Платы</a>
+        </li>
+        <li class="catalog-menu-item">
+          <a href="/" class="catalog-menu-link menu-link">Провода</a>
+        </li>
+        <li class="catalog-menu-item">
+          <a href="/" class="catalog-menu-link menu-link">Пайка</a>
+        </li>
+        <li class="catalog-menu-item">
+          <a href="/" class="catalog-menu-link menu-link">Датчики</a>
+        </li>
+        <li class="catalog-menu-item">
+          <a href="/" class="catalog-menu-link menu-link">Корпуса</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="catalog-grid">
+    {% for product in products %}
+      {% include "components/card.html" with product=product %}
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
