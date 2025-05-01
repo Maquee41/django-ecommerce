@@ -1,5 +1,5 @@
 [flake8]
-application-import-names = catalog
+application-import-names = catalog,pages
 exclude = .git,__pycache__,venv,.venv,__init__.py
 max-line-length = 79
 ignore = E203, E266, E501, W503

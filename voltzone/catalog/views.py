@@ -1,5 +1,6 @@
-from catalog.models import Product
 from django.shortcuts import get_object_or_404, render
+
+from catalog.models import Product
 
 
 def product_list(request):

@@ -1,5 +1,6 @@
-import catalog.views
 from django.urls import path, re_path
+
+import catalog.views
 
 
 urlpatterns = [
