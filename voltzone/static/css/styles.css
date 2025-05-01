@@ -5,6 +5,7 @@
   --blue-color: #023E8A;
   --blue-color-alternative: #003366;
   --green-color: #63af90;
+  --gray-color: #cccccc;
   --white-color: #ffffff;
   --color-in-stock: #28a745;
   --color-out-of-stock: #dc3545;
@@ -60,6 +61,30 @@ a:hover {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.not-found {
+  background-color: var(--blue-color-alternative);
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px ;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.button {
+  border: var(--border);
+  background-color: var(--white-color);
+  color: var(--blue-color);
+  padding-block: 10px;
+  padding-inline: 25px;
+  transition: var(--transition-duration);
+}
+
+.button:hover {
+  background-color: var(--gray-color);
 }
 
 .cart {

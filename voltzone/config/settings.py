@@ -111,5 +111,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 if not DEBUG and SECRET_KEY == "generate-new-key":
     raise ValueError(
-        "The SECRET_KEY environment variable is not set. Please configure it for production."
+        "The SECRET_KEY environment variable is not set. Please configure it for production.\n"
+        "If you're working locally, make sure to delete the .env file or set DEBUG=True in it.\n"
+        "To generate a new SECRET_KEY, run:\n"
+        "    python manage.py shell\n"
+        "Then execute:\n"
+        "    from django.core.management.utils import get_random_secret_key\n"
+        "    get_random_secret_key()"
     )
