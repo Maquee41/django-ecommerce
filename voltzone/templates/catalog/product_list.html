@@ -24,10 +24,16 @@
       </ul>
     </nav>
   </div>
-  <div class="catalog-grid">
-    {% for product in products %}
-      {% include "components/card.html" with product=product %}
-    {% endfor %}
-  </div>
+  {% if products.count > 0 %}
+    <div class="catalog-grid">
+      {% for product in products %}
+        {% include "components/card.html" with product=product %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="catalog-empty">
+      <p class="catalog-empty-text">В этой категории еще нет товаров (</p>
+    </div>
+  {% endif %}
 </section>
 {% endblock %}
