@@ -22,7 +22,7 @@
   </div>
   <div class="product-description">
     <h3>Описание</h2>
-      <p class="product-description-text">{{ product.description }}</p>
+      <p class="product-description-text">{{ product.description | safe }}</p>
   </div>
 </section>
 {% endblock %}
