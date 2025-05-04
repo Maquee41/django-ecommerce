@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="vacancy-details">
+  <h3 class="vacancy-card-title">{{ vacancy.title }}</h3>
+  <p class="vacancy-card-minimal-salary">от {{ vacancy.minimal_salary }} ₽ за месяц, на руки</p>
+  <p class="vacancy-card-description">{{ vacancy.description|safe }}</p>
+  <a href="/contacts" class="vacancy-card-response">Откликнуться</a>
+</section>
+{% endblock %}

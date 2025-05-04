@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "django_summernote",
     "catalog.apps.CatalogConfig",
     "pages.apps.PagesConfig",
+    "vacancies.apps.VacanciesConfig",
 ]
 
 MIDDLEWARE = [

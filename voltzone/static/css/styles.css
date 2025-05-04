@@ -366,6 +366,97 @@ a:hover {
   margin-top: 10px;
 }
 
+.vacancies {
+  color: var(--black-color);
+  margin: 25px 150px;
+}
+
+.vacancies-card {
+  background-color: var(--white-color);
+  border: 1px solid var(--gray-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  margin: 16px 0;
+  transition: var(--transition-duration);
+}
+
+.vacancies-card-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.vacancies-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.vacancies-card-minimal-salary {
+  font-weight: bold;
+  color: #2b9348;
+  margin-bottom: 6px;
+}
+
+.vacancies-card-short-description {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.vacancies-card-contacts {
+  display: inline-block;
+  margin-top: 12px;
+  color: #1d4ed8;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.vacancies-card-contacts:hover {
+  text-decoration: underline;
+}
+
+.vacancy-details {
+  color: var(--blue-color);
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: var(--white-color);
+  border: 1px solid var(--gray-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.vacancy-card-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--blue-color-alternative);
+}
+
+.vacancy-details {
+  font-size: 1.125rem;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.vacancy-card-minimal-salary {
+  color: var(--green-color);
+  margin-bottom: 10px;
+}
+
+.vacancy-card-response {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 24px;
+  background-color: var(--green-color);
+  color: var(--white-color);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: var(--transition-duration);
+}
+
 .footer {
   background-color: var(--green-color);
   min-height: var(--min-footer-height);
@@ -449,7 +540,7 @@ a:hover {
   }
 
   .product-details {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -513,6 +604,10 @@ a:hover {
 
   .product {
     padding-inline: 50px;
+  }
+
+  .vacancies {
+    margin: 15px 20px;
   }
 }
 

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="vacancies">
+  {% for vacancy in vacancies %}
+  <article class="vacancies-card">
+    <a href="/vacancies/{{ vacancy.id }}" class="vacancies-card-link">
+      <h3 class="vacancies-card-title">{{ vacancy.title }}</h3>
+      <p class="vacancies-card-minimal-salary">От {{ vacancy.minimal_salary }} ₽ за месяц, на руки</p>
+      <p class="vacancies-card-short-description">{{ vacancy.short_description }}</p>
+    </a>
+    <a href="/contacts" class="vacancies-card-contacts">Контакты</a>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}
