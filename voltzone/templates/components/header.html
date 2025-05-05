@@ -14,6 +14,11 @@
       <li class="header-menu-item">
         <a href="/about" class="header-menu-link menu-link">О нас</a>
       </li>
+      {% if request.user.is_staff %}
+        <li class="header-menu-item">
+          <a href="/admin" class="header-menu-link menu-link">Админка</a>
+        </li>
+      {% endif %}
     </ul>
   </nav>
 </header>

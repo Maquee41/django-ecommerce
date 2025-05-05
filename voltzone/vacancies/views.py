@@ -3,7 +3,7 @@ from vacancies.models import Vacancy
 
 
 def vacancies_list(request):
-    vacancies = Vacancy.objects.all()
+    vacancies = Vacancy.objects.filter(is_active=True)
     context = {
         "vacancies": vacancies,
     }

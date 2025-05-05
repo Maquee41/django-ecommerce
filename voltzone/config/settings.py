@@ -110,6 +110,13 @@ MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
+SUMMERNOTE_CONFIG = {
+    "summernote": {
+        "lang": "ru-RU",
+    }
+}
+
+
 if not DEBUG and SECRET_KEY == "generate-new-key":
     raise ValueError(
         "The SECRET_KEY environment variable is not set. Please configure it for production.\n"
