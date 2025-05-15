@@ -1,10 +1,10 @@
 {% load static %}
 
 <article class="catalog-card">
-  <a href="/catalog/{{ product.id }}" class="catalog-card-link">
+  <a href="{% url 'catalog:detail' product.id %}" class="catalog-card-link">
     <img src="{{ product.image.url }}" alt="Монтажный провод" class="catalog-card-image" width="300">
     <h3 class="catalog-card-title">{{ product.name }}</h3>
-    <p class="catalog-card-price">{{ product.price }}</p>
+    <p class="catalog-card-price">{{ product.price }} ₽</p>
     {% if product.count > 19  %}
       <p class="catalog-card-stock in-stock">Много</p>
     {% elif product.count > 1 %}

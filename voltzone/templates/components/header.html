@@ -1,22 +1,22 @@
 <header class="header">
-  <a href="/" class="header-logo">VoltZone</a>
+  <a href="{% url 'pages:home' %}" class="header-logo">VoltZone</a>
   <nav class="header-menu">
     <ul class="header-menu-list menu-list">
       <li class="header-menu-item">
-        <a href="/" class="header-menu-link menu-link">Главная</a>
+        <a href="{% url 'pages:home' %}" class="header-menu-link menu-link">Главная</a>
       </li>
       <li class="header-menu-item">
-        <a href="/catalog" class="header-menu-link menu-link">Каталог</a>
+        <a href="{% url 'catalog:list' %}" class="header-menu-link menu-link">Каталог</a>
       </li>
       <li class="header-menu-item">
-        <a href="/vacancies" class="header-menu-link menu-link">Вакансии</a>
+        <a href="{% url 'vacancies:list' %}" class="header-menu-link menu-link">Вакансии</a>
       </li>
       <li class="header-menu-item">
-        <a href="/about" class="header-menu-link menu-link">О нас</a>
+        <a href="{% url 'pages:about' %}" class="header-menu-link menu-link">О нас</a>
       </li>
       {% if request.user.is_staff %}
         <li class="header-menu-item">
-          <a href="/admin" class="header-menu-link menu-link">Админка</a>
+          <a href="{% url 'admin:index' %}" class="header-menu-link menu-link">Админка</a>
         </li>
       {% endif %}
     </ul>

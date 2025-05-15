@@ -10,9 +10,18 @@ admin.site.register(Category)
 
 @admin.register(Product)
 class ItemAdmin(SummernoteModelAdmin):
+    list_display = (
+        "name",
+        "preview",
+        "price",
+        "count",
+    )
+    list_filter = ("category",)
+    readonly_fields = ("preview",)
     summernote_fields = ("description",)
-    readonly_fields = ["preview"]
 
     def preview(self, obj):
         if obj.image:
-            return mark_safe(f'<img width=300 src="{obj.image.url}" />')
+            return mark_safe(f'<img width=250 src="{obj.image.url}" />')
+
+    preview.short_description = "превью"
